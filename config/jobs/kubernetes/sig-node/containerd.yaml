@@ -66,6 +66,9 @@ periodics:
     - command:
       - runner.sh
       - /workspace/scenarios/kubernetes_e2e.py
+      env:
+      - name: USE_TEST_INFRA_LOG_DUMPING
+        value: "true"
       args:
       - --check-leaked-resources
       - --extract=ci/latest
